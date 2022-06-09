@@ -1,62 +1,34 @@
 <template>
   <v-container id="mainc" class="text-white">
+    <div v-for="d in data" :key="d" >
     <div class="tier">
-      <div class="tier-list">
-        <a class="character-img">
-          <img
-            src="https://lh4.googleusercontent.com/pUmkKR9cFvz1zY7tj8L3kjwkcf-S5i3x3_yeDnSyGKwdZrW2fnrZwqUfPg3H2aUZwefXy28mzjRrl61dLvg7f8c6iZ-l8sq0DRvEqkDmTJeUWexeQ7xrh6UpZRFbD1ZqggkchGRI-w"
-            class="character-icon" 
-          />
-          <img
-            src="https://yt3.ggpht.com/U3TkbpoMof4xGHZ_L6JmcYDOv6LVhzewGFy_8thMDvwv-62NqeGxK94_E-kzO7MpVO1l6AcWLA=w48-h48-c-k-nd"
+      <div class="tier-list" >
+        <a class="character-img"  v-for="x in d" :key="x" >
+              <img :src="x.profileimg" class="character-name"/>
+              <!-- <img
+            src=""
             class="character-type" alt="SSR"
-          />
-
-          <h2 class="character-name">tangGG</h2>
+            />
+            </div>-->
+            <h2 class="character-name">{{x.id}}</h2> 
+            <!-- </div> -->
         </a>
-
-        <a class="character-img"
-          ><img
-            src="https://lh5.googleusercontent.com/Gh16XUwD-6vE_zM_cChr4Fm3j2yKMfpaA5yKFTrWUpBrHth8IKqPbrdUOC9gWrNY3FnB4BORD7VaD5pIEDRAoog16C1J2UdSqHK6TEmeh9M3vRINKdnaWE7cp_DGhPwqw-4RBGswKQ"
-            class="character-icon"
-          />
-          <img
-            src="https://yt3.ggpht.com/U3TkbpoMof4xGHZ_L6JmcYDOv6LVhzewGFy_8thMDvwv-62NqeGxK94_E-kzO7MpVO1l6AcWLA=w48-h48-c-k-nd"
-            class="character-type" alt="SSR"
-          />
-          <h2 class="character-name">posaisea</h2>
-        </a>
-
-        <a class="character-img"
-          ><img
-            src="https://lh4.googleusercontent.com/pUmkKR9cFvz1zY7tj8L3kjwkcf-S5i3x3_yeDnSyGKwdZrW2fnrZwqUfPg3H2aUZwefXy28mzjRrl61dLvg7f8c6iZ-l8sq0DRvEqkDmTJeUWexeQ7xrh6UpZRFbD1ZqggkchGRI-w"
-            class="character-icon"
-          />
-          <img
-            src="https://yt3.ggpht.com/U3TkbpoMof4xGHZ_L6JmcYDOv6LVhzewGFy_8thMDvwv-62NqeGxK94_E-kzO7MpVO1l6AcWLA=w48-h48-c-k-nd"
-            class="character-type"
-          />
-          <h2 class="character-name">posaisea</h2>
-        </a>
-        <a class="character-img"
-          ><img
-            src="https://lh5.googleusercontent.com/skPi5VxuzZXKy9KW6RAaf1DKC3aJ_COTtP91s594GpLeCQtdES0LBHJBbbDdqmC2PNQn71ATBRTGNZLq-MmFaCDUvDK4Hs4YgY6SunS4PMr9f5GrIe7cijpjEHLtgltxUao7abT_ag"
-            class="character-icon"
-          />
-          <img
-            src="https://yt3.ggpht.com/U3TkbpoMof4xGHZ_L6JmcYDOv6LVhzewGFy_8thMDvwv-62NqeGxK94_E-kzO7MpVO1l6AcWLA=w48-h48-c-k-nd"
-            class="character-type"
-          />
-          <h2 class="character-name">posaisea</h2>
-        </a>
-        
-      </div>
+        </div>
+          </div>
+      
     </div>
   </v-container>
 </template>
 
 <script>
-export default {};
+import datalist from "~/data/datalist.json";
+export default {
+  data() {
+    return {
+      data: datalist,
+    };
+  },
+};
 </script>
 
 <style>
@@ -96,36 +68,36 @@ export default {};
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 8%;
+  width: 5%;
   padding: 10px;
 }
 .character-name {
-  width: 100%;
+  /* width: 100%;
   color: #fff;
   font-size: 14px;
   text-align: center;
   margin: 10px 0 0;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: color 0.3s;
+  transition: color 0.3s; */
 }
-.character-type {
+/* .character-type {
   position: absolute;
-  top: 142px;
-  /* right: 80%; */
+  top: 25%;
+  right: 80%;
   width: 40px;
   height: 30px;
   background: #36384a;
   border-radius: 100px;
   padding: 2px;
-}
+} */
 .character-icon {
   /* width: 50px; */
   /* height: 50px; */
   /* background: #36384a; */
   /* border-radius: 4px; */
 }
-img{
-    border-style: none;
+img {
+  border-style: none;
 }
 </style>

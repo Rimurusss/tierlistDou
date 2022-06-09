@@ -1,0 +1,30 @@
+{
+    "data": [
+        {
+            "id": "tangg1",
+            "type":"SSR",
+            "profileimg":"yayaSSR.png"
+
+        },
+        {
+            "id": "tangg22",
+            "type":"SSR",
+            "profileimg":"yeanSSR.png"
+        },
+        {
+            "id": "tangg33",
+            "type":"SSR",
+            "profileimg":"6wingSSR.png"
+        },
+        {
+            "id": "tangg44",
+            "type":"SSR",
+            "profileimg":"ainSSR.png"
+        },
+        {
+            "id": "tangg55",
+            "type":"SSR",
+            "profileimg":"dragonSSR.png"
+        }
+    ]
+}

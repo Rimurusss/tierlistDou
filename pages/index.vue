@@ -1,6 +1,7 @@
 <template>
 <div>
   <Characters/>
+  <!-- <img src="~/static/6wingSSR.png"></img> -->
 </div>
 </template>
 
